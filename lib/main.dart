@@ -31,6 +31,17 @@ class MyApp extends StatelessWidget {
               width: 20,
               height: 20,
             ),
+            Divider(
+              color: Colors.black,
+              thickness: 5,
+            ),
+            SizedBox(
+              height: 100,
+              child: VerticalDivider(
+                color: Colors.black,
+                thickness: 5,
+              ),
+            ),
             Center(
               child: CircleAvatar(
                 radius: 90,
