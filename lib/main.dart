@@ -2,9 +2,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           leading: Icon(Icons.menu),
           title: Center(
-            child: Text('Top Flutter widgets'),
+            child: Text('Flutter widgets'),
           ),
           backgroundColor: Colors.cyanAccent[100],
           actions: [Icon(Icons.logout)],
@@ -27,6 +29,25 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                    fillColor: Colors.red[100],
+                    filled: true,
+                    hintText: "Email",
+                    labelText: "Email",
+                    hintStyle: TextStyle(color: Colors.green)),
+              ),
+            ),
+            RichText(
+                text: TextSpan(
+                    text: "Hello ",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                    children: [
+                  TextSpan(text: "World", style: TextStyle(color: Colors.green))
+                ])),
             SizedBox(
               width: 20,
               height: 20,
